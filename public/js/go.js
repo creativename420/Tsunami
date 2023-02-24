@@ -127,7 +127,7 @@ surf.contentWindow.location.reload()
 var currentproxy = localStorage.getItem("proxy")
 var rhodium = document.getElementById("rhodium")
 var corrosion = document.getElementById("corrosion")
-var ultraviolet = document.getElementById("ultraviolet")
+var ultraviolet = document.getElementById("uv")
 var stomp = document.getElementById("stomp")
 
 if (localStorage.getItem("proxy") !== null) {
