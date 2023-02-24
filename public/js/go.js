@@ -2,7 +2,7 @@ var rhodiumproxy = window.location.protocol + "//" + window.location.hostname + 
 
 var corrosionproxy = window.location.protocol + "//" + window.location.hostname + "/corrosion/gateway?url="
 
-var uvproxy = window.location.protocol + "//" + window.location.hostname + __uv$config.prefix
+var ultravioletproxy = window.location.protocol + "//" + window.location.hostname + __uv$config.prefix
 
 var stompproxy = window.location.protocol + "//" + window.location.hostname
 
@@ -40,8 +40,8 @@ if (currentproxy == "Rhodium") {
 return rhodiumproxy + url
 } else if (currentproxy == "Corrosion") {
 return corrosionproxy + url
-} else if (currentproxy == "uv") {
-return uvproxy + __uv$config.encodeUrl(url)
+} else if (currentproxy == "Ultraviolet") {
+return ultravioletproxy + __uv$config.encodeUrl(url)
 } else if (currentproxy == "Stomp") {
 return stompproxy + Stomp.html(StompSearch.query(url))
 }
@@ -127,7 +127,7 @@ surf.contentWindow.location.reload()
 var currentproxy = localStorage.getItem("proxy")
 var rhodium = document.getElementById("rhodium")
 var corrosion = document.getElementById("corrosion")
-var uv = document.getElementById("uv")
+var ultraviolet = document.getElementById("uv")
 var stomp = document.getElementById("stomp")
 
 if (localStorage.getItem("proxy") !== null) {
@@ -140,22 +140,22 @@ localStorage.setItem("proxy", proxy)
 if (proxy == "Rhodium") {
 rhodium.classList.add("proxysel")
 corrosion.classList.remove("proxysel")
-uv.classList.remove("proxysel")
+ultraviolet.classList.remove("proxysel")
 stomp.classList.remove("proxysel")
 } else if (proxy == "Corrosion") {
 rhodium.classList.remove("proxysel")
-uv.classList.remove("proxysel")
+ultraviolet.classList.remove("proxysel")
 corrosion.classList.add("proxysel")
 stomp.classList.remove("proxysel")
-} else if (proxy == "uv") {
+} else if (proxy == "Ultraviolet") {
 rhodium.classList.remove("proxysel")
 corrosion.classList.remove("proxysel")
-uv.classList.add("proxysel")
+ultraviolet.classList.add("proxysel")
 stomp.classList.remove("proxysel")
 } else if (proxy == "Stomp") {
 rhodium.classList.remove("proxysel")
 corrosion.classList.remove("proxysel")
-uv.classList.remove("proxysel")
+ultraviolet.classList.remove("proxysel")
 stomp.classList.add("proxysel")
 }
 }
