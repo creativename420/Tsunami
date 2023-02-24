@@ -853,31 +853,3 @@ opacity: 0;
 transform:scale(0.5) translateY(-500%) rotate(360deg);
 }
 }
-
-.dropdown {
-    background: linear-gradient(var(--accent-primary-color), var(--accent-secondary-color));
-    padding: 1em 0;
-    position: absolute;
-    display: none;
-    top: 35px;
-    border-radius: 8px;
-    box-shadow: var(--accent-secondary-color) 0px 2px 8px 0px;
-  }
-  
-  .dropdown li + li {
-    margin-top: 10px;
-  }
-  
-  .dropdown li {
-    padding: 0.5em 1em;
-    width: 8em;
-    text-align: center;
-  }
-  
-  .dropdown li:hover {
-    background-color: var(--background-primary-color);
-  }
-  
-  .nav-dropdown:hover .dropdown {
-    display: block;
-  }
